@@ -1,0 +1,105 @@
+/* styles.css */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(145deg, #fde5e5, #fff0f0);
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #d80073;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #ffaddb;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
+}
+
+button {
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e87291;
+    transform: scale(1.05);
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff8f8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+video, img, audio {
+    margin: 15px 0;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+select, input[type="date"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ffaddb;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.chat-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.chat-collage img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #b8005a;
+}
+
+/* Romance-specific enhancements */
+#thank-you-section {
+    background: linear-gradient(145deg, #ffcccc, #ffe6e6);
+    border: 2px solid #ffb3d9;
+    border-radius: 25px;
+}
+
+img {
+    border: 2px solid #f5a3c6;
+}
+

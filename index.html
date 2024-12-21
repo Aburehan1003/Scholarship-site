@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Finder</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- Page 1: Surprise and Forgiveness -->
+        <div id="page1" class="page">
+            <h1>Surprise, Laado! 💖</h1>
+            <p>The fight was fake, just a silly way to lead up to this surprise! 🥰</p>
+            <video controls>
+                <source src="StartVideo.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <p>Mujhse sach much likhe nahi jaa raha thaa... Tumse roothna bhi nahi aata mujhe🥺</p>
+            <button onclick="navigateTo('page2')">I forgive you! 😊</button>
+            <button onclick="showSweetMessage()">Not yet 🙄</button>
+        </div>
+
+        <!-- Page 2: Shayari Section -->
+        <div id="page2" class="page" style="display:none;">
+            <h1>Ek Zindagi lekar aao mere paas tum..❤️</h1>
+            <p><em>"Tumse nazrein kyaa mili roshan fizae ho gayi,</em></p>
+            <p><em>aaj jaana pyaar ki jadugari kyaa cheez hai."</em></p>
+            <p><em>"Hoshwalo ko khabar kyaa bekhudi kyaa cheez hai,</em></p>
+            <p><em>Ishq kijiye phir samjhye zindagi kya cheez hai."</em></p>
+            <button onclick="navigateTo('page3')">Next</button>
+        </div>
+
+        <!-- Page 3: Romantic Video -->
+        <div id="page3" class="page" style="display:none;">
+            <h1>Our Special Moment 🎥</h1>
+            <video controls>
+                <source src="WhatsApp Video 2024-12-19 at 22.07.56_86668acf.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <p>Tumhe achaa laga jiyu?Pata hai tumhare bina bilkul adhoora sa mehsoos hota hai.... Aage chalein? </p>
+            <button onclick="navigateTo('page4')">Next</button>
+        </div>
+
+        <!-- Page 4: Chat Collage -->
+        <div id="page4" class="page" style="display:none;">
+            <h1>A Special Video for You 🎥</h1>
+            <video controls autoplay>
+                <source src="Chatvideo.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <button onclick="navigateTo('page5')">Next</button>  
+        </div>
+
+
+
+        <!-- Page 5: Movies, Drinks, and Foods -->
+        <div id="page5" class="page" style="display:none;">
+            <h1>Movie & Treats 🎬🍴</h1>
+            <p>Jiyu, would you like to watch a movie with me?</p>
+            <label for="movie-choice">Pick a movie:</label>
+            <select id="movie-choice">
+                <option value="172 Days">172 Days</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="food-choice">Pick a food:</label>
+            <select id="food-choice">
+                <option value="biryani">Biryani</option>
+                <option value="chaaanp">Chaaanp</option>
+                <option value="kheema">Kheema Bun</option>
+            </select>
+            <label for="drink-choice">Pick a drink:</label>
+            <select id="drink-choice">
+                <option value="sosyo">Sosyo</option>
+                <option value="sprite">Sprite</option>
+                <option value="shake">Thick Shake</option>
+            </select>
+            <button onclick="navigateTo('page6')">Next</button>
+        </div>
+
+        <!-- Page 6: Proposal & Dad's Permission -->
+        <div id="page6" class="page" style="display:none;">
+            <h1>Will You Marry Me? 💍</h1>
+            <p>Ziya, you make my life complete. Would you say yes to forever?</p>
+            <button onclick="navigateTo('page7')">Yes, and I’ll ask Dad too! 😄</button>
+        </div>
+
+        <!-- Page 7: Final Video Message -->
+        <div id="page7" class="page" style="display:none;">
+            <h1>My Final Message 📹</h1>
+            <video controls>
+                <source src="EndVideo.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <p>I love you, Laado! ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(pageId) {
+    const pages = document.querySelectorAll('.page');
+
+    pages.forEach(page => {
+        if (page.style.display === 'block') {
+            // Stop any audio playing on the current (visible) page
+            const mediaElements = page.querySelectorAll('audio');
+            mediaElements.forEach(media => {
+                media.pause();
+                media.currentTime = 0; // Reset audio to the beginning
+            });
+        }
+
+        // Hide all pages
+        page.style.display = 'none';
+    });
+
+    // Show the target page
+    const targetPage = document.getElementById(pageId);
+    targetPage.style.display = 'block';
+
+    // Play any audio on the target page
+    // const mediaElements = targetPage.querySelectorAll('audio');
+    // mediaElements.forEach(media => {
+    //     media.play();
+    // });
+}
+
+
+    </script>
+</body>
+</html>
+
+
